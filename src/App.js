@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Contact from "./components/Contact";
+import Home from "./components/Home";
+
+import Layout from "./components/Layout";
+import Places from "./components/Places";
+import RegisterForm from "./components/RegisterForm";
+import Professional from "./components/professional";
+import Addprofessional from "./components/Addprofessional";
+import Remove from "./components/Remove";
+import Login from "./components/Login";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/Home" element={<Home />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Places" element={<Places />} />
+            <Route path="/RegisterForm" element={<RegisterForm />} />
+            <Route path="/Login" element={<Login />} />
+            
+            <Route path="/Professional" element={<Professional />} />
+            <Route path="/Addprofessional" element={<Addprofessional />} />
+            <Route path="/Remove" element={<Remove />} />
+
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
