@@ -10,6 +10,7 @@ import Professional from "./components/professional";
 import Addprofessional from "./components/Addprofessional";
 import Remove from "./components/Remove";
 import Login from "./components/Login";
+import SignUp from "./components/Signup";
 
 
 
@@ -24,7 +25,7 @@ function App() {
             <Route path="/Places" element={<Places />} />
             <Route path="/RegisterForm" element={<RegisterForm />} />
             <Route path="/Login" element={<Login />} />
-            
+            <Route path="/Signup" element={<SignUp />} />
             <Route path="/Professional" element={<Professional />} />
             <Route path="/Addprofessional" element={<Addprofessional />} />
             <Route path="/Remove" element={<Remove />} />

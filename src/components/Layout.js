@@ -21,9 +21,7 @@ export default function Layout(){
       
       
       
-      <li className="nav-item">
-        <button className="nav-link"><Link to="/Login">Login</Link></button>
-      </li>
+     
       
       <li className="nav-item">
         <button className="nav-link"><Link to="/professional">Staffs</Link></button>
